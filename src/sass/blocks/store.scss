@@ -1,0 +1,114 @@
+.store {
+  display: flex;
+  justify-content: space-between;
+  width: 672px;
+  margin: 0 auto;
+}
+
+.store__button {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 311px;
+  padding: 21px 65px;
+  padding-left: 105px;
+
+
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+
+  background: #5e3db3;
+  border-radius: 45px;
+  box-shadow: 0 16px 24px 0 rgb(10, 13, 53);
+  transition: all 0.3s linear;
+
+  &:hover,
+  &:focus {
+    background: #0d0f33;
+    box-shadow: 0 5px 15px 0 rgb(255, 255, 255);
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 19px;
+
+    background: url('../img/sprite.png');
+  }
+
+  &--apple::before {
+    left: 40px;
+
+    width: 33px;
+    height: 37px;
+
+    background-position: -36px 0;
+  }
+
+  &--play-market {
+    padding-left: 125px;
+
+    &::before {
+      left: 61px;
+
+      width: 36px;
+      height: 39px;
+
+      background-position: 0 0;
+    }
+  }
+}
+
+.store__top {
+  display: block;
+}
+
+.store__site-name {
+  display: block;
+
+  font-weight: 700;
+}
+
+@media (max-width: $tablet-width) {
+  .store {
+    width: 652px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .store {
+    width: 282px;
+  }
+
+  .store__button {
+    width: 138px;
+    padding: 10px;
+    padding-left: 50px;
+
+    font-size: 8px;
+
+    &::before {
+      left: 20px;
+      top: 10px;
+    }
+
+    &--apple::before {
+      width: 15px;
+      height: 17px;
+
+      background-position: -69px -27px;
+    }
+
+    &--play-market::before {
+      width: 16px;
+      height: 18px;
+
+      background-position: 0 -64px;
+    }
+  }
+
+}
